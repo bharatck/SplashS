@@ -1,6 +1,7 @@
 package splash.com.splashscreen;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -30,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button login_button;
     TextView txt;
-
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
 
     @Override
@@ -48,12 +59,13 @@ public class MainActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
 
-                                                if (username.getText().toString().equals("ketancool") && password.getText().toString().equals("ketancool")) {
-                                                    Toast.makeText(MainActivity.this,"Welcome developer",
+                                                if (username.getText().toString().equals("vipul") && password.getText().toString().equals("vipul")) {
+                                                    Toast.makeText(MainActivity.this, "Welcome developer",
                                                             Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(MainActivity.this, Menu.class));
 
                                                 } else {
-                                                    Toast.makeText(MainActivity.this,"Fuckoff User",
+                                                    Toast.makeText(MainActivity.this, "Wrong Credentials",
                                                             Toast.LENGTH_SHORT).show();
                                                 }
 
@@ -61,12 +73,5 @@ public class MainActivity extends AppCompatActivity {
                                         }
         );
 
-
-
-        //LoginButton();
     }
-
-
-    public void LoginButton() {
-            }
 }
