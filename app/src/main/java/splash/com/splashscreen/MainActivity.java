@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
                                                 if (username.getText().toString().equals("vipul") && password.getText().toString().equals("vipul")) {
                                                     Toast.makeText(MainActivity.this, "Welcome developer",
-                                                            Toast.LENGTH_SHORT).show();
+                                                            Toast.LENGTH_LONG).show();
                                                     startActivity(new Intent(MainActivity.this, Menu.class));
 
                                                 } else {
                                                     Toast.makeText(MainActivity.this, "Wrong Credentials",
-                                                            Toast.LENGTH_SHORT).show();
+                                                            Toast.LENGTH_LONG).show();
                                                 }
 
                                             }
